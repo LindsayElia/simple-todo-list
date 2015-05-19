@@ -3,15 +3,18 @@
 * {
   font-family: 'Open Sans Condensed', sans-serif;
 }
+
 body {
   max-width:320px;
   margin:0 auto;
 }
+
 h1 {
   font-size:52px;
   font-weight:300;
   margin:10px 0 20px 0;
 }
+
 input {
   border:none;
   width:100%;
@@ -19,10 +22,12 @@ input {
   background:#eee;
   padding:8px 20px;
 }
+
 ul {
   margin:20px 0;
   padding:0;
 }
+
 ul li {
   width:100%;
   list-style-type: none;
@@ -33,9 +38,9 @@ ul li {
   font-size:22px;
 }
 
-.completed {
-  text-decoration:line-through;
-  color:#eee;
+.completed {						/* Colt said we won't use this */
+  text-decoration:line-through;		/* Colt said we won't use this */
+  color:#eee;						/* Colt said we won't use this */
 }
 
 #add_todo{
