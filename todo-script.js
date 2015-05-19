@@ -40,6 +40,7 @@ submitButton.addEventListener("click", function(e){
 	createNewListItem();				// call the function (above) that creates the new list item
 	count = count + 1;					// make a counter so we can use it as the number to get the index of the array
 	console.log(count);
+	userInput.value = "";
 	
 	// need to reset the input field to show the placeholder text
 	// turning off preventDefault will allow this, but then it looks like my console.dir does not get run
