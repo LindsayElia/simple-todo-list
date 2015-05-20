@@ -3,26 +3,32 @@
 * {
   font-family: 'Open Sans Condensed', sans-serif;
 }
+
 body {
   max-width:320px;
   margin:0 auto;
 }
+
 h1 {
   font-size:52px;
   font-weight:300;
   margin:10px 0 20px 0;
 }
+
 input {
   border:none;
   width:100%;
   font-size:22px;
   background:#eee;
   padding:8px 20px;
+  margin: 3% 0;
 }
+
 ul {
-  margin:20px 0;
+  margin:3% 0;
   padding:0;
 }
+
 ul li {
   width:100%;
   list-style-type: none;
@@ -39,7 +45,7 @@ ul li {
 }
 
 #add_todo{
-  margin-left:10px;
+  margin: 3% 3% 3% 6.5%;
   background:#FF6666;
   color:#662929;
   font-size:16px;
@@ -48,4 +54,8 @@ ul li {
   letter-spacing:2px;
   box-shadow:0 2px 0 0 #662929;
   border-radius:4px;
+}
+
+span.deleteMe {
+	float: right;
 }
