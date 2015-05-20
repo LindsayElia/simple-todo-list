@@ -21,11 +21,11 @@ input {
   font-size:22px;
   background:#eee;
   padding:8px 20px;
-  margin: 20px 0;
+  margin: 3% 0;
 }
 
 ul {
-  margin:20px 0;
+  margin:3% 0;
   padding:0;
 }
 
@@ -39,13 +39,13 @@ ul li {
   font-size:22px;
 }
 
-.completed {						/* Colt said we won't use this */
-  text-decoration:line-through;		/* Colt said we won't use this */
-  color:#eee;						/* Colt said we won't use this */
+.completed {
+  text-decoration:line-through;
+  color:#eee;
 }
 
 #add_todo{
-  margin-left:10px;
+  margin: 3% 3% 3% 6.5%;
   background:#FF6666;
   color:#662929;
   font-size:16px;
@@ -55,3 +55,8 @@ ul li {
   box-shadow:0 2px 0 0 #662929;
   border-radius:4px;
 }
+
+span.deleteMe {
+	float: right;
+}
+

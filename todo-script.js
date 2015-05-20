@@ -1,5 +1,6 @@
 // gets the body element and sets it to be the variable 'body'
 var body = document.getElementsByTagName("body")[0]; 
+
 var userInput = document.getElementById("entry");
 var submitButton = document.getElementById("add_todo");
 var answersArr = [];
@@ -19,9 +20,17 @@ body.appendChild(unorderedList);
 
 // add the user's input as HTML in a new div on the page
 var createNewListItem = function(){
-	var listItem = document.createElement("li");
-	unorderedList.appendChild(listItem);
-	listItem.innerHTML = answersArr[count];
+	var listItem = document.createElement("li");	// create a LI
+	unorderedList.appendChild(listItem);			// add LI to UL
+	listItem.innerHTML = answersArr[count];			// put the text from the user's input into the LI
+	listItem.style.className = "classListItem";
+	listItem.setAttribute = ("data-count", count);		// add a data attribute to the LI so we can delete it later, and set the 
+														// value of the data attribute to be the same as the current counter
+	
+	var deleteSpan = document.createElement("span");	// create a SPAN
+	listItem.appendChild(deleteSpan);				// add SPAN to LI
+	deleteSpan.className = "deleteMe"				// add a className to the SPAN
+	deleteSpan.innerHTML = "Delete";				// put the text 'Delete' into the LI
 }
 
 // this eventListener is not necessary but it's nice to see it being logged in the console
@@ -48,3 +57,31 @@ submitButton.addEventListener("click", function(e){
 	// e.stopPropogation();
 	
 })
+
+// Mark the list items as completed by changhing the className of each LI to match the CSS for a completed LI
+unorderedList.addEventListener("click", function(e){
+	console.log("UL listener"); 	// this is for us to see what happens when we click anywhere in the UL
+	if (e.srcElement.className){			// this will run only when LIs have been given a className
+		e.srcElement.className = "";		// reset the className to be empty
+	} else {
+		e.srcElement.className = "completed";	// if there is NO className already on the LI, or the target element of the
+		// unorderedList or UL, then we want to assign a className of 'completed'. This will run first for all LI that 
+		// have not been clicked on previously
+	}
+})
+
+
+// trying to delete list items...not yet working!
+/*
+unorderedList.addEventListener("click", function(e, createNewListItem){
+	if (e.srcElement.className = "deleteMe"){
+		// e.stopPropagation();
+		// document.removeChild(this);
+		for (var j = 0; j < unorderedList.length; j++){
+			unorderedList.removeChild(this);
+		}
+	//	var itemToDelete = document.getElementsByTagName("li");
+	//	this.removeChild(itemToDelete);
+	}
+}, false) // false = bubble up, which is default; true = capture downward, the opposite of bubble up
+*/
